@@ -55,7 +55,7 @@ Search bar is inside a <form> element containing:
 - input type="search"
 - button
 ### Hover Effects
-On hover,linnks change colour and show underline.
+On hover, links change colour and show underline.
 
 --
 
@@ -69,13 +69,13 @@ On hover,linnks change colour and show underline.
 - footer
 
 ### Form and Inputs
-Form contains
-form
-- form id="searchform" 
-- form className="searchform".
+**Form Structure:**
+- `form id="searchform"`
+- `form className="searchform"`
 
-inputs
-- input type="text"
-- input name="s"
-- button id="s"
-![alt text](image-1.png)
+**Input Elements:**
+- `input type="text"`
+- `input name="s"`
+- `button id="s"`
+
+**Note:** The image reference `![alt text](image-1.png)` appears to be broken - the image file doesn't exist in the repository.
