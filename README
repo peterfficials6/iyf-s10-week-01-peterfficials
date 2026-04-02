@@ -1,23 +1,89 @@
-# Peter Kamau - Portfolio
+# Peter Kamau - IYF S10 Week 01
 
-Welcome to my GitHub repository! This is a simple portfolio page showcasing my personal information and interests.
+Welcome to my IYF Season 10 Week 01 repository! This contains all the tasks and projects completed during the first week of the program.
 
 ## About Me
 
 Hi! My name is Peter Kamau. I am passionate about technology and building digital technology solutions.
 
-## Hobbies
+## Tasks & Projects Structure
 
-- Playing football
-- Traveling and exploring new places
-- Thrifting
+### 📁 Lesson 1 Tasks
+
+#### 1.1 Personal Portfolio Page
+- **File**: `Lesson 1 Tasks/index.html`
+- **Format**: HTML
+- **Description**: Basic personal portfolio page with introduction, hobbies, and contact information
+
+#### 1.2 DevTools Exploration
+- **File**: `Lesson 1 Tasks/devtools-exploration.md`
+- **Format**: Markdown
+- **Description**: Analysis of three different websites using browser developer tools
+  - example.com (HTML tags analysis)
+  - developer.mozilla.org (Navigation and search structure)
+  - nse.co.ke (Form elements and HTML structure)
+
+### 📁 Lesson 2 Tasks
+
+#### 2.1 Semantic HTML Conversion
+- **File**: `Lesson 2 Tasks/Semetric-Conversion.html`
+- **Format**: HTML
+- **Description**: Conversion of HTML content to semantic HTML5 elements
+
+#### 2.2 Contact Form
+- **File**: `Lesson 2 Tasks/Contact-Form.html`
+- **Format**: HTML
+- **Description**: Functional contact form with validation and user feedback
+
+#### 2.3 Accessibility Report
+- **File**: `Lesson 2 Tasks/Accessibility-report.md`
+- **Format**: Markdown
+- **Description**: Accessibility analysis and improvements for web content
+
+#### 2.4 Multi-Page Portfolio Structure
+- **Files**: 
+  - `Lesson 2 Tasks/multi-pages Portfolio structure/index.html` (Homepage)
+  - `Lesson 2 Tasks/multi-pages Portfolio structure/about.html` (About page)
+  - `Lesson 2 Tasks/multi-pages Portfolio structure/portfolio.html` (Projects page)
+  - `Lesson 2 Tasks/multi-pages Portfolio structure/contact.html` (Contact page)
+  - `Lesson 2 Tasks/multi-pages Portfolio structure/css/style.css` (Stylesheet)
+- **Format**: HTML + CSS
+- **Description**: Complete multi-page portfolio website with consistent navigation and professional styling
+
+## Technical Skills Demonstrated
+
+- **HTML5**: Semantic markup, forms, accessibility
+- **CSS3**: Responsive design, styling, layout
+- **JavaScript**: Basic interactivity and form handling
+- **Git & GitHub**: Version control and repository management
+- **Web Accessibility**: ARIA labels, semantic structure
+- **Responsive Design**: Mobile-first approach
 
 ## Contact
 
 Feel free to reach out to me via email: peterfficials6@gmail.com
 
-## Repository Structure
+## Repository Navigation
 
-- `index.html` - Main portfolio page
-- `devtools-exploration.md` - DevTools exploration notes
-- `New folder/` - Additional resources
+```
+iyf-s10-week-01-peterfficials/
+├── README                           # This file
+├── Lesson 1 Tasks/
+│   ├── index.html                   # Personal portfolio page
+│   └── devtools-exploration.md      # DevTools analysis
+└── Lesson 2 Tasks/
+    ├── Semetric-Conversion.html     # Semantic HTML conversion
+    ├── Contact-Form.html            # Contact form implementation
+    ├── Accessibility-report.md      # Accessibility analysis
+    └── multi-pages Portfolio structure/
+        ├── index.html               # Portfolio homepage
+        ├── about.html               # About page
+        ├── portfolio.html           # Projects showcase
+        ├── contact.html             # Contact page
+        └── css/
+            └── style.css            # Portfolio styles
+```
+
+---
+
+*This repository represents my learning journey and practical implementations during IYF Season 10 Week 01.*
