@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Kamau - IYF S10 Week 01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-section {
+            margin-bottom: 40px;
+        }
+        
+        .about-section h2 {
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .about-section p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .tasks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .task-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .task-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .task-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .task-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .task-link:hover {
+            background: #5a67d8;
+        }
+        
+        .skills-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .skills-section h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tasks-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Peter Kamau</h1>
+            <p class="subtitle">IYF Season 10 - Week 01 Portfolio</p>
+        </header>
+        
+        <div class="main-content">
+            <section class="about-section">
+                <h2>About Me</h2>
+                <p>Hi! My name is Peter Kamau. I am passionate about technology and building digital technology solutions. This repository showcases all the tasks and projects I completed during IYF Season 10 Week 01.</p>
+            </section>
+            
+            <section class="tasks-section">
+                <h2>Tasks & Projects</h2>
+                <div class="tasks-grid">
+                    <div class="task-card">
+                        <h3>📝 Personal Portfolio</h3>
+                        <p>Basic personal portfolio page with introduction, hobbies, and contact information.</p>
+                        <a href="Lesson%201%20Tasks/index.html" class="task-link">View Portfolio</a>
+                    </div>
+                    
+                    <div class="task-card">
+                        <h3>🔍 DevTools Exploration</h3>
+                        <p>Analysis of three different websites using browser developer tools.</p>
+                        <a href="Lesson%201%20Tasks/devtools-exploration.md" class="task-link">View Analysis</a>
+                    </div>
+                    
+                    <div class="task-card">
+                        <h3>🏗️ Semantic HTML</h3>
+                        <p>Conversion of HTML content to semantic HTML5 elements.</p>
+                        <a href="Lesson%202%20Tasks/Semetric-Conversion.html" class="task-link">View Conversion</a>
+                    </div>
+                    
+                    <div class="task-card">
+                        <h3>📧 Contact Form</h3>
+                        <p>Functional contact form with validation and user feedback.</p>
+                        <a href="Lesson%202%20Tasks/Contact-Form.html" class="task-link">View Form</a>
+                    </div>
+                    
+                    <div class="task-card">
+                        <h3>♿ Accessibility Report</h3>
+                        <p>Accessibility analysis and improvements for web content.</p>
+                        <a href="Lesson%202%20Tasks/Accessibility-report.md" class="task-link">View Report</a>
+                    </div>
+                    
+                    <div class="task-card">
+                        <h3>🌐 Multi-Page Portfolio</h3>
+                        <p>Complete multi-page portfolio website with professional styling.</p>
+                        <a href="Lesson%202%20Tasks/multi-pages%20Portfolio%20structure/index.html" class="task-link">View Portfolio</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="skills-section">
+                <h2>Technical Skills Demonstrated</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <strong>HTML5</strong>
+                        Semantic markup, forms, accessibility
+                    </div>
+                    <div class="skill-item">
+                        <strong>CSS3</strong>
+                        Responsive design, styling, layout
+                    </div>
+                    <div class="skill-item">
+                        <strong>JavaScript</strong>
+                        Basic interactivity and form handling
+                    </div>
+                    <div class="skill-item">
+                        <strong>Git & GitHub</strong>
+                        Version control and repository management
+                    </div>
+                    <div class="skill-item">
+                        <strong>Web Accessibility</strong>
+                        ARIA labels, semantic structure
+                    </div>
+                    <div class="skill-item">
+                        <strong>Responsive Design</strong>
+                        Mobile-first approach
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <div class="contact-info">
+                <p>📧 Contact: <a href="mailto:peterfficials6@gmail.com">peterfficials6@gmail.com</a></p>
+                <p>📍 Location: Nairobi, Kenya</p>
+            </div>
+            <p>&copy; 2024 Peter Kamau - IYF S10 Week 01. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
