@@ -5,174 +5,398 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Kamau - IYF S10 Week 01</title>
     <style>
+        /* ============================================
+           GLOBAL STYLES & TYPOGRAPHY (Matching Portfolio Theme)
+           ============================================ */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffffff;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f8f8;
+            --text-color: #333333;
+            --border-color: #e5e5e5;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: var(--text-color);
+            background-color: #ffffff;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
+        
+        /* ============================================
+           HEADER & NAVIGATION
+           ============================================ */
         
         header {
-            text-align: center;
-            padding: 40px 0;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            margin-bottom: 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
         
-        h1 {
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+        
+        .logo a:hover {
+            color: #666666;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #000000;
+        }
+        
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000000;
+        }
+        
+        /* ============================================
+   TYPOGRAPHY & LAYOUT
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #666666;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    margin: 0.25rem;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.btn-secondary:hover {
+    background-color: #000000;
+    color: white;
+}
+        
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        
+        .hero {
+            background-color: #000000;
             color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            padding: 6rem 0;
+            text-align: center;
         }
         
-        .subtitle {
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
             color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .main-content {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .about-section {
-            margin-bottom: 40px;
-        }
-        
-        .about-section h2 {
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-        }
-        
-        .about-section p {
-            color: #666;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
             line-height: 1.8;
+        }
+        
+        .hero-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        /* ============================================
+           TASKS SECTION
+           ============================================ */
+        
+        .tasks-section {
+            background-color: var(--light-color);
+        }
+        
+        .tasks-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #000000;
         }
         
         .tasks-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
         
         .task-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 25px;
-            border-left: 4px solid #667eea;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--primary-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .task-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
         
         .task-card h3 {
-            color: #2d3748;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
         }
         
         .task-card p {
-            color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
         
-        .task-link {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-        
-        .task-link:hover {
-            background: #5a67d8;
-        }
+        /* ============================================
+           SKILLS SECTION
+           ============================================ */
         
         .skills-section {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
+            background-color: #ffffff;
         }
         
         .skills-section h2 {
-            color: #2d3748;
-            margin-bottom: 20px;
             text-align: center;
+            margin-bottom: 3rem;
+            color: #000000;
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
         
-        .skill-item {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .skill-category {
+            background-color: #f8f8f8;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #000000;
+            transition: transform 0.2s ease;
         }
         
-        .skill-item strong {
-            color: #667eea;
-            display: block;
-            margin-bottom: 5px;
+        .skill-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        
+        .skill-category h3 {
+            color: #000000;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .skill-category p {
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        /* ============================================
+           FOOTER
+           ============================================ */
         
         footer {
-            text-align: center;
-            padding: 30px 0;
+            background-color: #0f172a;
             color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
         }
         
         .contact-info {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
+            text-align: left;
         }
         
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
         }
         
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
         
         @media (max-width: 768px) {
+            .nav-menu {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            
             h1 {
                 font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero {
+                padding: 4rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.125rem;
             }
             
             .tasks-grid {
@@ -180,103 +404,178 @@
             }
             
             .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            footer .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-info {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-menu {
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .logo h1 {
+                font-size: 1.25rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.25rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero-links {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Peter Kamau</h1>
-            <p class="subtitle">IYF Season 10 - Week 01 Portfolio</p>
-        </header>
-        
-        <div class="main-content">
-            <section class="about-section">
-                <h2>About Me</h2>
-                <p>Hi! My name is Peter Kamau. I am passionate about technology and building digital technology solutions. This repository showcases all the tasks and projects I completed during IYF Season 10 Week 01.</p>
-            </section>
-            
-            <section class="tasks-section">
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="index.html">leo</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#tasks">Tasks</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Peter Kamau</h1>
+                    <p>IYF Season 10 - Week 01 Portfolio. Telecom engineering graduate learning web development. Building cool stuff with code.</p>
+                    <div class="hero-links">
+                        <a href="#tasks" class="btn btn-primary">View Tasks</a>
+                        <a href="Lesson%202%20Tasks/multi-pages%20Portfolio%20structure/index.html" class="btn btn-secondary">Portfolio</a>
+                        <a href="#contact" class="btn btn-secondary">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks" class="tasks-section">
+            <div class="container">
                 <h2>Tasks & Projects</h2>
                 <div class="tasks-grid">
-                    <div class="task-card">
+                    <article class="task-card">
                         <h3>📝 Personal Portfolio</h3>
                         <p>Basic personal portfolio page with introduction, hobbies, and contact information.</p>
-                        <a href="Lesson%201%20Tasks/index.html" class="task-link">View Portfolio</a>
-                    </div>
+                        <a href="Lesson%201%20Tasks/index.html" class="btn btn-primary">View Portfolio</a>
+                    </article>
                     
-                    <div class="task-card">
+                    <article class="task-card">
                         <h3>🔍 DevTools Exploration</h3>
                         <p>Analysis of three different websites using browser developer tools.</p>
-                        <a href="Lesson%201%20Tasks/devtools-exploration.md" class="task-link">View Analysis</a>
-                    </div>
+                        <a href="Lesson%201%20Tasks/devtools-exploration.md" class="btn btn-primary">View Analysis</a>
+                    </article>
                     
-                    <div class="task-card">
+                    <article class="task-card">
                         <h3>🏗️ Semantic HTML</h3>
                         <p>Conversion of HTML content to semantic HTML5 elements.</p>
-                        <a href="Lesson%202%20Tasks/Semetric-Conversion.html" class="task-link">View Conversion</a>
-                    </div>
+                        <a href="Lesson%202%20Tasks/Semetric-Conversion.html" class="btn btn-primary">View Conversion</a>
+                    </article>
                     
-                    <div class="task-card">
+                    <article class="task-card">
                         <h3>📧 Contact Form</h3>
                         <p>Functional contact form with validation and user feedback.</p>
-                        <a href="Lesson%202%20Tasks/Contact-Form.html" class="task-link">View Form</a>
-                    </div>
+                        <a href="Lesson%202%20Tasks/Contact-Form.html" class="btn btn-primary">View Form</a>
+                    </article>
                     
-                    <div class="task-card">
+                    <article class="task-card">
                         <h3>♿ Accessibility Report</h3>
                         <p>Accessibility analysis and improvements for web content.</p>
-                        <a href="Lesson%202%20Tasks/Accessibility-report.md" class="task-link">View Report</a>
-                    </div>
+                        <a href="Lesson%202%20Tasks/Accessibility-report.md" class="btn btn-primary">View Report</a>
+                    </article>
                     
-                    <div class="task-card">
+                    <article class="task-card">
                         <h3>🌐 Multi-Page Portfolio</h3>
                         <p>Complete multi-page portfolio website with professional styling.</p>
-                        <a href="Lesson%202%20Tasks/multi-pages%20Portfolio%20structure/index.html" class="task-link">View Portfolio</a>
-                    </div>
+                        <a href="Lesson%202%20Tasks/multi-pages%20Portfolio%20structure/index.html" class="btn btn-primary">View Portfolio</a>
+                    </article>
                 </div>
-            </section>
-            
-            <section class="skills-section">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
                 <h2>Technical Skills Demonstrated</h2>
                 <div class="skills-grid">
-                    <div class="skill-item">
-                        <strong>HTML5</strong>
-                        Semantic markup, forms, accessibility
+                    <div class="skill-category">
+                        <h3>Web Technologies</h3>
+                        <p>HTML5 semantic markup, CSS3 responsive design, JavaScript interactivity, and modern web development practices.</p>
                     </div>
-                    <div class="skill-item">
-                        <strong>CSS3</strong>
-                        Responsive design, styling, layout
+                    
+                    <div class="skill-category">
+                        <h3>Development Tools</h3>
+                        <p>Git version control, GitHub repository management, Chrome DevTools, and modern development workflows.</p>
                     </div>
-                    <div class="skill-item">
-                        <strong>JavaScript</strong>
-                        Basic interactivity and form handling
+                    
+                    <div class="skill-category">
+                        <h3>Design & Accessibility</h3>
+                        <p>Responsive design principles, web accessibility standards, ARIA labels, and user experience optimization.</p>
                     </div>
-                    <div class="skill-item">
-                        <strong>Git & GitHub</strong>
-                        Version control and repository management
-                    </div>
-                    <div class="skill-item">
-                        <strong>Web Accessibility</strong>
-                        ARIA labels, semantic structure
-                    </div>
-                    <div class="skill-item">
-                        <strong>Responsive Design</strong>
-                        Mobile-first approach
+                    
+                    <div class="skill-category">
+                        <h3>Engineering Background</h3>
+                        <p>Telecommunications engineering foundation, problem-solving skills, technical thinking, and system design approach.</p>
                     </div>
                 </div>
-            </section>
-        </div>
-        
-        <footer>
-            <div class="contact-info">
-                <p>📧 Contact: <a href="mailto:peterfficials6@gmail.com">peterfficials6@gmail.com</a></p>
-                <p>📍 Location: Nairobi, Kenya</p>
             </div>
-            <p>&copy; 2024 Peter Kamau - IYF S10 Week 01. All rights reserved.</p>
-        </footer>
-    </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <p>&copy; 2024 Peter Kamau - IYF S10 Week 01. All rights reserved.</p>
+                <p>📧 <a href="mailto:peterfficials6@gmail.com">peterfficials6@gmail.com</a></p>
+                <p>📍 Nairobi, Available for remote collaboration worldwide</p>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Email">Email</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
