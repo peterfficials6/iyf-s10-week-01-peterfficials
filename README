@@ -1,53 +1,38 @@
-# Peter Kamau - IYF S10 Week 01
+# Peter Kamau - IYF Season 10 - Week 2: Advanced Web Development
 
-Welcome to my IYF Season 10 Week 01 repository! This contains all the tasks and projects completed during the first week of the program.
+## Overview
+Advanced web development tasks demonstrating professional styling, responsive design, and modern CSS techniques.
 
-## About Me
+## Week 2 Focus: Professional Styling & Design
+This repository showcases advanced web development skills with:
+- **Centralized CSS System** - Single styles.css for all pages
+- **Professional Design** - Modern color scheme and typography
+- **Responsive Layouts** - Mobile-first approach
+- **Interactive Elements** - Hover effects, transitions, animations
+- **Multi-page Portfolio** - Complete website with navigation
 
-Hi! My name is Peter Kamau. I am passionate about technology and building digital technology solutions.
+## Projects
 
-## Tasks & Projects Structure
+### 🏠 Main Landing Page
+- **File**: `index.html`
+- **Features**: Hero section, task cards, skills showcase, professional navigation
+- **Skills**: Responsive design, CSS Grid, animations, modern layout
 
-### 📁 Lesson 1 Tasks
+### 🌐 Multi-Page Portfolio
+- **Location**: `Lesson 2 Tasks/multi-pages Portfolio structure/`
+- **Pages**: Home, About, Projects, Contact
+- **Features**: Professional navigation, project galleries, contact forms
+- **Skills**: Multi-page architecture, consistent theming, professional styling
 
-#### 1.1 Personal Portfolio Page
-- **File**: `Lesson 1 Tasks/index.html`
-- **Format**: HTML
-- **Description**: Basic personal portfolio page with introduction, hobbies, and contact information
-
-#### 1.2 DevTools Exploration
-- **File**: `Lesson 1 Tasks/devtools-exploration.md`
-- **Format**: Markdown
-- **Description**: Analysis of three different websites using browser developer tools
-  - example.com (HTML tags analysis)
-  - developer.mozilla.org (Navigation and search structure)
-  - nse.co.ke (Form elements and HTML structure)
-
-### 📁 Lesson 2 Tasks
-
-#### 2.1 Semantic HTML Conversion
-- **File**: `Lesson 2 Tasks/Semetric-Conversion.html`
-- **Format**: HTML
-- **Description**: Conversion of HTML content to semantic HTML5 elements
-
-#### 2.2 Contact Form
+### 📧 Contact Form
 - **File**: `Lesson 2 Tasks/Contact-Form.html`
-- **Format**: HTML
-- **Description**: Functional contact form with validation and user feedback
+- **Features**: Styled form elements, validation, modern inputs
+- **Skills**: Form styling, user experience, CSS transitions
 
-#### 2.3 Accessibility Report
-- **File**: `Lesson 2 Tasks/Accessibility-report.md`
-- **Format**: Markdown
-- **Description**: Accessibility analysis and improvements for web content
-
-#### 2.4 Multi-Page Portfolio Structure
-- **Files**: 
-  - `Lesson 2 Tasks/multi-pages Portfolio structure/index.html` (Homepage)
-  - `Lesson 2 Tasks/multi-pages Portfolio structure/about.html` (About page)
-  - `Lesson 2 Tasks/multi-pages Portfolio structure/portfolio.html` (Projects page)
-  - `Lesson 2 Tasks/multi-pages Portfolio structure/contact.html` (Contact page)
-  - `Lesson 2 Tasks/multi-pages Portfolio structure/css/style.css` (Stylesheet)
-- **Format**: HTML + CSS
+### 🎨 CSS Components
+- **Central Styling**: `styles.css`
+- **Features**: CSS variables, responsive grids, component-based design
+- **Technologies**: Modern CSS, Flexbox, Grid, animations
 - **Description**: Complete multi-page portfolio website with consistent navigation and professional styling
 
 ## Technical Skills Demonstrated
